@@ -45,7 +45,7 @@ services:
   connect:
     image: localimage/kafka-connect-datagen:latest
     build:
-      context: ./docker/kafka-connect
+      context: ./demo/kafka-connect
       dockerfile: Dockerfile
     container_name: connect
     depends_on:

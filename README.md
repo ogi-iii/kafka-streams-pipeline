@@ -61,7 +61,7 @@ graph LR;
 - Mac or Linux
 - Docker
 
-### Demo Usage
+### Demo Setup
 
 #### 1. Run Containers with Docker Compose
 

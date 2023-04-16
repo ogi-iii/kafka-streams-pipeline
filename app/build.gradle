@@ -1,0 +1,46 @@
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+    id "com.github.johnrengelman.shadow" version "8.1.1"
+}
+
+archivesBaseName = 'kafka-streams-pipeline'
+version = '1.0.0-SNAPSHOT'
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+    maven {
+        // the location to resolve dependencies of the group: 'io.confluent'
+        url "https://packages.confluent.io/maven"
+    }
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.mongodb/mongodb-driver
+    implementation 'org.mongodb:mongodb-driver:3.6.3'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.0.1'
+    // https://mvnrepository.com/artifact/org.apache.kafka/kafka-streams
+    implementation 'org.apache.kafka:kafka-streams:3.3.2'
+    // https://mvnrepository.com/artifact/io.confluent/kafka-streams-avro-serde
+    implementation 'io.confluent:kafka-streams-avro-serde:7.3.3'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12
+    implementation 'org.slf4j:slf4j-log4j12:2.0.7'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+	annotationProcessor 'org.projectlombok:lombok:1.18.26'
+
+    // Use JUnit Jupiter for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'kafka.streams.pipeline.StreamsApp'
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+}

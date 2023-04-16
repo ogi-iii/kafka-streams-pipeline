@@ -110,7 +110,7 @@ java -jar ./app/build/libs/kafka-streams-pipeline-1.0.0-SNAPSHOT-all.jar
 
 - see also the logs of 'Streams Pipeline App' in Terminal 2
 
-### Cleanup Demo
+### Demo Cleanup
 
 #### 1. Terminate Generating Source Data
 

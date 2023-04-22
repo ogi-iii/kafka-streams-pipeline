@@ -106,6 +106,8 @@ java -jar ./app/build/libs/kafka-streams-pipeline-1.0.0-SNAPSHOT-all.jar
 
     http://localhost:9021/clusters/
 
+        controlcenter.cluster > Topics > pizzaOrders > Messages
+
 - see also the logs of 'Streams Pipeline App' in Terminal 2
 
 ### Demo Cleanup

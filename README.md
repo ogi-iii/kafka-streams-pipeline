@@ -40,19 +40,17 @@ java -jar ./app/build/libs/kafka-streams-pipeline-1.0.0-SNAPSHOT-all.jar
 run this app with containerized Apache Kafka and Mongo DB
 
 ```mermaid
-graph LR;
+graph TD;
     CC[Confluent Control Center]
     KC[[Kafka Connect]]
     AK([Apache Kafka])
-    subgraph Transform
     PA(Streams Pipeline App)
-    end
     MD[(Mongo DB)]
     ME[Mongo Express]
-    AK==Extract==>PA
-    PA==Load==>MD
     CC-.web console.->AK
     KC--generate source data-->AK
+    AK==consume source data==>PA
+    PA==insert sink data==>MD
     ME-.web console.->MD
 ```
 

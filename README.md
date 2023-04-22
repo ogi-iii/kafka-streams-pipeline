@@ -131,3 +131,8 @@ java -jar ./app/build/libs/kafka-streams-pipeline-1.0.0-SNAPSHOT-all.jar
 # Terminal 1
 docker compose -f ./demo/docker-compose.yml down -v --rmi all
 ```
+
+## See Also
+
+- [KEDA Auto Scalable Pipeline (my another repository in GitHub)](https://github.com/ogi-iii/keda-auto-scalable-pipeline)
+    - horizontally parallelizes this streams pipeline application based on an event-driven autoscaler with KEDA

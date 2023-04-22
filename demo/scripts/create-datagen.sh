@@ -6,7 +6,7 @@ curl -i -X PUT http://localhost:8083/connectors/datagen/config \
             "key.converter": "org.apache.kafka.connect.storage.StringConverter",
             "kafka.topic": "pizzaOrders",
             "quickstart": "pizza_orders",
-            "max.interval": 1000,
+            "max.interval": 10,
             "iterations": 1000,
             "tasks.max": "1"
         }'

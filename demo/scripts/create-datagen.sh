@@ -7,6 +7,6 @@ curl -i -X PUT http://localhost:8083/connectors/datagen/config \
             "kafka.topic": "pizzaOrders",
             "quickstart": "pizza_orders",
             "max.interval": 100,
-            "iterations": 5000,
+            "iterations": 2500,
             "tasks.max": "1"
         }'
